@@ -1,4 +1,4 @@
-"" Last update: 01.05.2015 02:42
+"" Last update: 03.05.2015 18:35
 au! bufwritepre $MYVIMRC call setline(1, '"" Last update: '.strftime("%d.%m.%Y %H:%M"))
 au! bufwritepost $MYVIMRC source $MYVIMRC
 
@@ -229,9 +229,9 @@ imap <F5> <ESC>:bp <CR> i
 nmap <F6> <ESC>:bn<CR>
 vmap <F6> <ESC>:bn <CR>
 imap <F6> <ESC>:bn <CR> i
-nmap <F7> <ESC>:MiniBufExplorer <CR>
-vmap <F7> <ESC>:MiniBufExplorer <CR>
-imap <F7> <ESC>:MiniBufExplorer <CR> i
+nmap <F7> <ESC>:BufExplorer <CR>
+vmap <F7> <ESC>:BufExplorer <CR>
+imap <F7> <ESC>:BufExplorer <CR> i
 nmap <F8> <ESC>:bdelete <CR>
 vmap <F8> <ESC>:bdelete <CR>
 imap <F8> <ESC>:bdelete <CR> i
