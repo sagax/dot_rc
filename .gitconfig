@@ -1,0 +1,19 @@
+[core]
+  quotepath = false
+  autocrlf = false
+  fileMode = true
+  safecrlf = true
+  excludesfile = ~/.gitignore
+  editor = gvim -f
+[color]
+  branch = auto
+  diff = auto
+  interactive = auto
+  pager = true
+  showbranch = auto
+  status = auto
+  ui = auto
+[push]
+  default = simple
+[diff]
+  tool = gvimdiff

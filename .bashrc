@@ -13,8 +13,7 @@ cfon="\[\e[1;36m\]"
 cfon2="\[\e[1;90m\]"
 
 ##### set path
-PATH=$PATH:$HOME/.rvm/bin:/sbin:/usr/sbin:$HOME/.cabal/bin:/usr/bin:/bin:/sbin:$HOME/programs/activetcl/bin:/usr/local/heroku/bin
-. $HOME/.rvm/scripts/rvm
+PATH=$PATH:/sbin:/usr/sbin:$HOME/.cabal/bin:/usr/bin:/bin:/sbin:$HOME/programs/activetcl/bin:/usr/local/heroku/bin
 . $HOME/.git-prompt.sh
 
 ##### set vars
@@ -29,4 +28,6 @@ PS1="${cblu}\u${cnormal}${cblulight}@${cnormal}${cpurp}\h${cnormal}${cblulight}:
 
 ##########
 alias devt="devtodo --database ~/Dropbox/todo"
-PATH="/usr/local/heroku/bin:$PATH"
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+PATH=$PATH:$HOME/.rvm/bin

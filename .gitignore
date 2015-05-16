@@ -1,0 +1,5 @@
+*.*~
+*.komodoproject
+\.\~*.vue
+*.lock
+Gemfile.lock

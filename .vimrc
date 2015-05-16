@@ -1,4 +1,4 @@
-"" Last update: 03.05.2015 18:35
+"" Last update: 16.05.2015 21:09
 au! bufwritepre $MYVIMRC call setline(1, '"" Last update: '.strftime("%d.%m.%Y %H:%M"))
 au! bufwritepost $MYVIMRC source $MYVIMRC
 
@@ -40,6 +40,7 @@ let g:pymode_rope = 0
 let g:pymode_lint = 0
 let g:pymode_rope_completion = 0
 let g:gitgutter_max_signs = 1500
+let g:smartgf_auto_refresh_ctags = 0
 
 let g:CoffeeAutoTagDisabled=0     " Disables autotaging on save (Default: 0 [false])
 let g:CoffeeAutoTagFile="./tags"  " Name of the generated tag file (Default: ./tags)
@@ -85,7 +86,7 @@ endfunction
 function! SetColorschemeTime()
     let hour=strftime("%H")
     if 6 <= hour && hour < 19
-        colorscheme lilydjwg_dark
+        colorscheme neutron
     else
         colorscheme github
     endif
@@ -294,6 +295,8 @@ vnoremap <C-F11> <ESC>:PrevColorScheme<CR>
 inoremap <C-F11> <ESC>:PrevColorScheme<CR>
 vnoremap <silent>* <ESC>:call VisualSearch()<CR>/<C-R>/<CR>
 vnoremap <silent># <ESC>:call VisualSearch()<CR>?<C-R>/<CR>
+
+map <A-F5> :SmargfRefreshTags<CR>
 
 call SetColorschemeTime()
 
