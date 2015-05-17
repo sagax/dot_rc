@@ -4,6 +4,7 @@ import XMonad.Actions.GridSelect
 import XMonad.Actions.WindowMenu
 import XMonad.Actions.Promote
 import XMonad.Actions.SimpleDate
+import XMonad.Actions.WorkspaceNames
 import XMonad.Config.Gnome
 import XMonad.Operations
 import Dzen
@@ -18,6 +19,7 @@ import XMonad.Util.PositionStore
 import XMonad.Util.Themes
 import XMonad.Util.CustomKeys
 import XMonad.Layout.Circle
+import XMonad.Layout.Cross
 import XMonad.Layout.Grid
 import XMonad.Layout.PerWorkspace
 import XMonad.Layout.Reflect
@@ -38,6 +40,8 @@ import XMonad.Layout.DraggingVisualizer
 import XMonad.Layout.ShowWName
 import XMonad.Layout.Accordion
 import XMonad.Layout.MouseResizableTile
+import XMonad.Layout.MagicFocus
+import XMonad.Layout.MultiColumns
 import Graphics.X11.ExtraTypes.XF86
 import qualified XMonad.StackSet as W
 import qualified Data.Map as M
@@ -48,9 +52,11 @@ myLayouts = noBorders Full |||
             ( showWName $ avoidStruts $ smartBorders $ spacing 2 $
               noBorders Full |||
               Tall 2 (10/100) (1/2) |||
+              simpleCross |||
               (reflectHoriz $ Tall 2 (10/100) (1/2)) |||
               (magnifier $ Tall 1 (10/100) (1/2)) |||
               (magnifier $ Tall 4 (10/100) (1/2)) |||
+              multiCol [1] 4 0.01 0.5 |||
               Circle |||
               simpleTabbed |||
               ThreeCol 1 (10/100) (1/3) |||
