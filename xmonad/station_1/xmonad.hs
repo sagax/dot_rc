@@ -23,7 +23,9 @@ import XMonad.Layout.Cross
 import XMonad.Layout.Grid
 import XMonad.Layout.PerWorkspace
 import XMonad.Layout.Reflect
+import XMonad.Layout.ResizableTile
 import XMonad.Layout.ToggleLayouts
+import XMonad.Layout.MultiToggle
 import XMonad.Layout.NoBorders
 import XMonad.Layout.Tabbed
 import XMonad.Layout.StackTile
@@ -52,8 +54,9 @@ myLayouts = noBorders Full |||
             ( showWName $ avoidStruts $ smartBorders $ spacing 2 $
               noBorders Full |||
               Tall 2 (10/100) (1/2) |||
+              ResizableTall 1 (3/100) (1/2) [] |||
               simpleCross |||
-              (reflectHoriz $ Tall 2 (10/100) (1/2)) |||
+              (reflectVert $ Tall 2 (10/100) (1/2)) |||
               (magnifier $ Tall 1 (10/100) (1/2)) |||
               (magnifier $ Tall 4 (10/100) (1/2)) |||
               multiCol [1] 4 0.01 0.5 |||
@@ -99,9 +102,12 @@ myPrettyPrinter h = dzenPP {
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList
     [
       ((modm, xK_g), goToSelected defaultGSConfig)
+    , ((modm, xK_b), spawnSelected defaultGSConfig ["gvim", "gpick", "xmonad_start", "mtpain", "gimp", "inkscape", "alsamixergui", "hexchat"])
     , ((modm, xK_o ), windowMenu)
     , ((modm, xK_s), promote)
     , ((modm, xK_d), date)
+    , ((modm, xK_a), sendMessage MirrorShrink)
+    , ((modm, xK_z), sendMessage MirrorExpand)
     ]
 
 main = do
