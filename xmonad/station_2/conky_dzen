@@ -1,0 +1,16 @@
+background yes
+draw_shades yes
+default_color darkgrey
+no_buffers yes
+out_to_console yes
+out_to_x no
+update_interval 1
+use_xft yes
+
+TEXT
+^fg(\#ff130a)${cpu cpu1}% ${cpu cpu2}%  \
+^fg(\#00ff0d)${memperc}%  \
+^fg(\#00d6ff)${downspeedf br0}k  \
+^fg(\#ff8a00)${upspeedf br0}k  \
+^fg(\#ffbabb)${time %d %m %Y}  \
+^fg(\#ffbab8)${time %r} \

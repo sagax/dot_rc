@@ -1,0 +1,28 @@
+#!/bin/bash
+$(conky -c /home/sagax/.xmonad/conky_dzen | \
+    dzen2 \
+    -x '700' \
+    -y '0' \
+    -w '700' \
+    -h '24' \
+    -ta 'm' \
+    -bg '#000000' \
+    -fg '#FFFFFF' \
+    -fn 'arial:bold:size=10' \
+    2>/dev/null 1>/dev/null &)
+$(trayer \
+    --edge top \
+    --align right \
+    --margin 0 \
+    --SetDockType true \
+    --SetPartialStrut true \
+    --expand false \
+    --widthtype pixel \
+    --heighttype pixel \
+    --width 350 \
+    --height 24 \
+    --transparent true \
+    --tint 0x00000000 \
+    --alpha 0 \
+    2>/dev/null 1>/dev/null &)
+
