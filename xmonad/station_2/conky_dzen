@@ -13,4 +13,4 @@ TEXT
 ^fg(\#00d6ff)${downspeedf br0}k  \
 ^fg(\#ff8a00)${upspeedf br0}k  \
 ^fg(\#ffbabb)${time %d %m %Y}  \
-^fg(\#ffbab8)${time %r} \
+^fg(\#ffbab8)${time %r}
