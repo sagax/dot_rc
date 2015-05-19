@@ -1,0 +1,2 @@
+#!/bin/bash
+$(pwgen -C 10 -1 -B -A)

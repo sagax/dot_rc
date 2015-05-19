@@ -1,0 +1,9 @@
+#!/bin/bash
+DOTFILE="$1"
+OUTPNG="$(basename $1 .dot).png"
+
+$(dot -Tpng $DOTFILE -o $OUTPNG)
+if [[ $? == "0" ]]
+then
+    $(feh $OUTPNG)
+fi

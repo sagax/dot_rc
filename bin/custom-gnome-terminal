@@ -1,0 +1,8 @@
+#!/bin/bash
+HOUR=$(date +%H)
+if [[ $HOUR -ge 8 ]] && [[ $HOUR -le 18 ]]
+then
+    $(gnome-terminal --profile=sagax &)
+else
+    $(gnome-terminal --profile=sagax_white &)
+fi

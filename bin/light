@@ -1,0 +1,29 @@
+#!/bin/bash
+
+cnormal="\e[0m"
+cwhite="\e[1;7m"
+s=" "
+
+if [[ $1 == "" ]]
+then
+    count=80
+else
+    count=$1
+fi
+
+if [[ $2 == "" ]]
+then
+    row=10
+else
+    row=$2
+fi
+
+for i in $(seq 0 $count)
+do
+    s="${s} "
+done
+
+for i in $(seq 0 $row)
+do
+    printf "${cwhite}${s}${cnormal}\n"
+done
