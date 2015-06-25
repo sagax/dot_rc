@@ -208,7 +208,7 @@ au FileType tcl set omnifunc=tclcomplete#CompleteTCL
 au FileType css set omnifunc=csscomplete#CompleteCSS
 au FileType sass set omnifunc=csscomplete#CompleteCSS
 au FileType scss set omnifunc=csscomplete#CompleteCSS
-au FileType css,html,sass,scss,rb,ruby,erb,php,xml,js,javascript,erb,coffee set expandtab tabstop=2 shiftwidth=2 smarttab softtabstop=2
+au FileType css,html,sass,scss,rb,ruby,erb,eruby,php,xml,js,javascript,erb,coffee set expandtab tabstop=2 shiftwidth=2 smarttab softtabstop=2
 au FileType css,sass,scss setf scss
 au BufNewFile,BufRead *.mxml set filetype=mxml
 au BufNewFile,BufRead *.as set filetype=actionscript
